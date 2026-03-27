@@ -4,141 +4,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NaHora</title>
     <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 
 <body>
 
-
-    <div class="header">
+    <header class="header">
         <nav class="nav_header">
             <ul>
                 <li>
-                    <a href="" class="img">
-                        <img src="images/logo.png" alt="">
+                    <a href="#" class="img">
+                        <img src="images/logo.png" alt="Logo NaHora">
                         <h2>NaHora</h2>
                     </a>
                 </li>
                 <li>
-                    <a href="" class="slogan">
+                    <a href="#" class="slogan">
                         <h3>Entrega mais rápida e entrega na hora!</h3>
                     </a>
                 </li>
             </ul>
         </nav>
-    </div>
+    </header>
 
+    <main class="main">
+        <section class="left">
+            <h2 class="titulo_secao">Itens do cardápio</h2>
 
-    <div class="main">
-        <div class="left">
-            <h3>Itens</h3>
-        </div>
-        <div class="right">
-            <div class="entregas">
-                <div class="end_entrega">
-                    <h3>Entregar no Endereço</h3>
-                    <label class="end">
-                        <span>Casa</span>
-                        <input type="text" name="" id="">
-                    </label>
+            <div class="grid-itens">
+                <div class="card">
+                    <img src="images/burger.jpg" alt="Hambúrguer">
+                    <div class="card-info">
+                        <h4>Hambúrguer Artesanal</h4>
+                        <p class="descricao">Pão brioche, carne 180g, queijo e molho especial.</p>
+                        <p class="preco">R$ 25,00</p>
+                        <button>Adicionar</button>
+                    </div>
                 </div>
-                <div class="opc_entrega">
-                    <h3>Opções de entrega</h3>
-                    <label class="entrega_opcao">
-                        <input type="radio" name="entrega" value="padrao">
-                        <span>Entrega Padrão</span>
-                        <p>Receba em 40 min a 1 hora em dias úteis</p>
-                        <strong>R$ 00,00</strong>
-                    </label>
-                    <label class="entrega_opcao">
-                        <input type="radio" name="entrega" value="retirada">
-                        <span>Retirada na Loja</span>
-                        <p>Retire o pedido na loja assim que estiver pronto.</p>
-                        <strong>Grátis</strong>
-                    </label>
+
+                <div class="card">
+                    <img src="images/pizza.jpg" alt="Pizza">
+                    <div class="card-info">
+                        <h4>Pizza Calabresa</h4>
+                        <p class="descricao">Molho, queijo, calabresa e cebola.</p>
+                        <p class="preco">R$ 40,00</p>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/refri.jpg" alt="Refrigerante">
+                    <div class="card-info">
+                        <h4>Refrigerante 2L</h4>
+                        <p class="descricao">Bebida gelada para acompanhar o pedido.</p>
+                        <p class="preco">R$ 12,00</p>
+                        <button>Adicionar</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/batata.jpg" alt="Batata frita">
+                    <div class="card-info">
+                        <h4>Batata Frita</h4>
+                        <p class="descricao">Porção crocante e sequinha.</p>
+                        <p class="preco">R$ 18,00</p>
+                        <button>Adicionar</button>
+                    </div>
                 </div>
             </div>
-            <div class="pagamento_valor">
+        </section>
+
+        <aside class="right">
+            <div class="bloco">
+                <h3>Endereço de entrega</h3>
+
+                <div class="form-grid">
+                    <div class="campo">
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" placeholder="00000-000">
+                    </div>
+
+                    <div class="campo campo-maior">
+                        <label for="rua">Rua</label>
+                        <input type="text" id="rua" placeholder="Digite sua rua">
+                    </div>
+
+                    <div class="campo">
+                        <label for="numero">Número</label>
+                        <input type="text" id="numero" placeholder="Nº">
+                    </div>
+
+                    <div class="campo">
+                        <label for="complemento">Complemento</label>
+                        <input type="text" id="complemento" placeholder="Apartamento, bloco...">
+                    </div>
+
+                    <div class="campo">
+                        <label for="bairro">Bairro</label>
+                        <input type="text" id="bairro" placeholder="Seu bairro">
+                    </div>
+
+                    <div class="campo">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" placeholder="Sua cidade">
+                    </div>
+
+                    <div class="campo">
+                        <label for="estado">Estado</label>
+                        <input type="text" id="estado" placeholder="UF">
+                    </div>
+
+                    <div class="campo campo-maior">
+                        <label for="referencia">Ponto de referência</label>
+                        <input type="text" id="referencia" placeholder="Ex: portão azul, ao lado da farmácia">
+                    </div>
+                </div>
+            </div>
+
+            <div class="bloco">
+                <h3>Opções de entrega</h3>
+
+                <label class="entrega_opcao">
+                    <div class="opcao-topo">
+                        <span>Entrega Padrão</span>
+                        <input type="radio" name="entrega" value="padrao">
+                    </div>
+                    <p>Receba em 40 min a 1 hora em dias úteis</p>
+                    <strong>R$ 8,00</strong>
+                </label>
+
+                <label class="entrega_opcao">
+                    <div class="opcao-topo">
+                        <span>Retirada na Loja</span>
+                        <input type="radio" name="entrega" value="retirada">
+                    </div>
+                    <p>Retire o pedido na loja assim que estiver pronto.</p>
+                    <strong>Grátis</strong>
+                </label>
+            </div>
+
+            <div class="bloco resumo-pagamento">
                 <div class="valores">
                     <h3>Resumo de valores</h3>
                     <table>
                         <tbody>
                             <tr>
                                 <td>Subtotal</td>
-                                <td>R$00,00</td>
+                                <td>R$ 77,00</td>
                             </tr>
                             <tr>
                                 <td>Taxa de entrega</td>
-                                <td>R$00,00</td>
+                                <td>R$ 8,00</td>
                             </tr>
                             <tr>
                                 <td>Taxa de serviço</td>
-                                <td>R$00,00</td>
+                                <td>R$ 2,00</td>
                             </tr>
                             <tr class="total">
                                 <td>Total</td>
-                                <td>R$00,00</td>
+                                <td>R$ 87,00</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
+
                 <div class="pagamento">
-                    <h3>Forma de Pagamento</h3>
+                    <h3>Forma de pagamento</h3>
+
                     <label class="pagamento_opcao">
-                        <input type="radio" name="pagamento" value="pix">
                         <span>PIX</span>
+                        <input type="radio" name="pagamento" value="pix">
                     </label>
+
                     <label class="pagamento_opcao">
-                        <input type="radio" name="pagamento" value="cartao">
                         <span>Cartão de Crédito</span>
+                        <input type="radio" name="pagamento" value="cartao">
                     </label>
+
                     <label class="pagamento_opcao">
-                        <input type="radio" name="pagamento" value="dinheiro">
                         <span>Dinheiro</span>
+                        <input type="radio" name="pagamento" value="dinheiro">
                     </label>
                 </div>
             </div>
+
             <div class="button">
                 <button>Confirmar Pedido</button>
             </div>
-        </div>
-    </div>
+        </aside>
+    </main>
 
-
-    <div class="footer">
+    <footer class="footer">
         <nav class="nav_footer">
             <ul>
                 <li>
-                    <a href="">
+                    <a href="#">
                         <span class="material-symbols-outlined">home</span>
-                        <p>Inicio</p>
+                        <p>Início</p>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="#">
                         <span class="material-symbols-outlined">receipt_long</span>
                         <p>Pedidos</p>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="#">
                         <span class="material-symbols-outlined">account_circle</span>
                         <p>Perfil</p>
                     </a>
                 </li>
             </ul>
+
             <ul class="ul_contato">
                 <li>
-                    <a href="">
+                    <a href="#">
                         <span class="material-symbols-outlined">call</span>
                         <p>Ligue para nós:</p>
                         <p>(41) 9 9712-2183</p>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="#">
                         <span class="material-symbols-outlined">mail</span>
                         <p>Email:</p>
                         <p>nahora_entrega@gmail.com</p>
@@ -146,8 +236,7 @@
                 </li>
             </ul>
         </nav>
-    </div>
-
+    </footer>
 
 </body>
 
