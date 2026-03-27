@@ -1,0 +1,62 @@
+.produtos-page {
+    display: block;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.grid-itens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 16px;
+}
+
+.card-info h4 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.descricao {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.preco {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 14px;
+    color: #ff771d;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    background: #ff771d;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+}
