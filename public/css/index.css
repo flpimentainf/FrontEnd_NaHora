@@ -1,11 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
+
     height: 100vh;
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
@@ -15,6 +18,8 @@ body {
     padding: 0;
     margin: 0;
     background-color: #ff771df4;
+    height: 85px;
+    flex-shrink: 0;
 }
 
 .nav_header {
@@ -65,36 +70,45 @@ body {
 }
 
 .main {
+    flex: 1;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin: 0;
+    height: 527px;
+    overflow: hidden;
 }
 
 .left {
     width: 60%;
-    padding: 10px;
+    overflow-y: auto;
 }
 
 .right {
     width: 40%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 10px;
+    overflow-y: auto;
 }
 
 .entregas {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 0;
+    width: 100%;
+}
+
+.end_entrega,
+.opc_entrega {
+    border-radius: 12px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .end_entrega {
-    width: 50%;
-    padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    width: 40%;
+}
+
+.opc_entrega {
+    width: 60%;
 }
 
 .end_entrega h3 {
@@ -103,10 +117,12 @@ body {
     color: #333;
 }
 
-.opc_entrega {
-    width: 50%;
+.end_entrega input {
+    width: 100%;
     padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
 }
 
 .opc_entrega h3 {
@@ -118,7 +134,7 @@ body {
 .entrega_opcao {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 5px;
     border: 2px solid #e5e5e5;
     border-radius: 10px;
     margin-bottom: 12px;
@@ -126,6 +142,7 @@ body {
     transition: all 0.2s ease;
     position: relative;
     background: #fff;
+    height: 75px;
 }
 
 .entrega_opcao:hover {
@@ -135,7 +152,7 @@ body {
 
 .entrega_opcao input[type="radio"] {
     position: absolute;
-    top: 18px;
+    top: 10px;
     right: 18px;
     transform: scale(1.2);
 }
@@ -163,12 +180,16 @@ body {
     background: #eef5ff;
 }
 
-.pagameto_valor {
+.pagamento_valor {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 0;
     width: 100%;
+}
+
+.valores,
+.pagamento {
+    border-radius: 12px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .valores {
@@ -187,14 +208,14 @@ body {
     width: 100%;
 }
 
-.valores table thead tr th {
+.valores h3 {
     margin-bottom: 15px;
     font-size: 18px;
     color: #333;
 }
 
 .valores table tbody td {
-    padding: 10px 0;
+    padding: 8px 0;
     font-size: 15px;
     color: #555;
 }
@@ -218,13 +239,52 @@ body {
 .pagamento {
     width: 50%;
     padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .pagamento h3 {
     margin-bottom: 15px;
     font-size: 18px;
     color: #333;
+}
+
+.pagamento_opcao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 9px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    background: #fff;
+}
+
+.pagamento_opcao:hover {
+    border-color: #007bff;
+    background: #f5f9ff;
+}
+
+.pagamento_opcao input {
+    transform: scale(1.2);
+}
+
+.pagamento_opcao span {
+    flex: 1;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+.pagamento_opcao:has(input:checked) {
+    border-color: #007bff;
+    background: #eef5ff;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
 }
 
 .button button {
@@ -248,6 +308,9 @@ body {
     padding: 0;
     margin: 0;
     background-color: #ff771df4;
+    height: 85px;
+    flex-shrink: 0;
+
 }
 
 .nav_footer {
